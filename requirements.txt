@@ -1,24 +1,29 @@
-# Heroku Deployment Files
+# Core Dependencies
+python-telegram-bot>=20.0    # Main Telegram Bot framework
+httpx>=0.24.0               # HTTP client for making API calls
+APScheduler>=3.10.1         # Job scheduling for task management
+python-dotenv>=1.0.0        # Environment variable management
 
-## 1. requirements.txt
-python-telegram-bot>=20.0
-httpx
-sqlite3
-python-dotenv
+# Database
+sqlite3                     # Built-in SQLite database
 
-## 2. Procfile
-worker: python bot.py
+# Testing
+pytest>=7.3.1              # Testing framework
+pytest-asyncio>=0.21.0     # Async testing support
+unittest2>=1.1.0           # Enhanced testing framework
 
-## 3. runtime.txt
-python-3.11.7
+# Development Tools
+pylint>=2.17.0             # Code linting
+black>=23.3.0              # Code formatting
+isort>=5.12.0              # Import sorting
 
-## 4. .gitignore
-*.pyc
-__pycache__/
-.env
-*.db
-venv/
-.DS_Store
-bot.log
-documents/
-photos/
+# Logging and Monitoring
+logging>=0.5.1.2           # Enhanced logging capabilities
+
+# Date and Time Handling
+pytz>=2023.3               # Timezone support
+python-dateutil>=2.8.2     # Date utilities
+
+# Optional but Recommended
+requests>=2.31.0           # HTTP library for external API calls
+pillow>=10.0.0            # Image processing for photo handling
